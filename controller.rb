@@ -9,6 +9,11 @@ class Controller
   
   def render(action)
     response.write render_to_string(action)
+    @rendered = true
+  end
+  
+  def rendered?
+    @rendered
   end
   
   def render_to_string(action)
