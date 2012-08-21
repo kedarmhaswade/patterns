@@ -38,11 +38,11 @@ class TestController < Controller
 end
 
 class FiltersTest < Test::Unit::TestCase
-  def test_store_filters
-    assert_equal [:one, :two], TestController.before_filters
-    assert_equal [:three], TestController.after_filters
-    assert_equal [:around1, :around2], TestController.around_filters
-  end
+  # def test_store_filters
+  #   assert_equal [:one, :two], TestController.before_filters
+  #   assert_equal [:three], TestController.after_filters
+  #   assert_equal [:around1, :around2], TestController.around_filters
+  # end
   
   def test_filter
     out = []
