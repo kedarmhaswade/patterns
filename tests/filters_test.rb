@@ -39,8 +39,8 @@ end
 
 class FiltersTest < Test::Unit::TestCase
   def test_store_filters
-    assert_equal [:one, :two], TestController.before_filters
-    assert_equal [:three], TestController.after_filters
+    assert_equal [:one, :two], TestController.instance_variable_get(:@before_filters)
+    assert_equal [:three], TestController.instance_variable_get(:@after_filters)
   end
   
   def test_filtering
